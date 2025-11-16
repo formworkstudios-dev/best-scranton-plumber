@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-gray-900 h-screen isolate">
+  <div class="relative bg-gray-900 min-h-screen isolate">
     <div class="absolute inset-0 z-0">
       <div
         class="w-full h-full bg-cover bg-center bg-fixed"
@@ -8,11 +8,11 @@
       <div class="absolute inset-0 bg-gray-900 opacity-70"></div>
       <div class="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-transparent to-gray-900/30"></div>
     </div>
-    <UContainer class="relative h-full flex items-center z-10">
+    <UContainer class="relative min-h-screen flex items-center z-10 py-20">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
         <!-- Left Column - Hero Content -->
         <div class="text-center lg:text-left">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl hero-animate-1">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl hero-animate-1 pt-20 md:pt-0">
             Best Scranton Plumber
           </h1>
           <p class="mt-6 text-base md:!text-lg leading-8 text-gray-300 max-w-[45ch] mx-auto lg:mx-0 hero-animate-2">
@@ -46,7 +46,7 @@
         </div>
 
         <!-- Right Column - Contact Form -->
-        <div class="flex justify-center">
+        <div class="flex justify-center pt-10 md:pt-0">
           <div class="bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/30 w-full max-w-md">
             <h2 class="text-2xl font-bold text-white !mb-6 pt-2 cursor-pointer">Contact a Plumber</h2>
             <form
