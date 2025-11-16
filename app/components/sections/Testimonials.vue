@@ -1,30 +1,53 @@
 <template>
-  <div id="testimonials" class="bg-white py-24 sm:py-32">
+  <div
+    id="testimonials"
+    class="bg-white py-24 sm:py-32"
+  >
     <UContainer>
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Our Customers Are Saying</h2>
-        <p class="mt-6 text-lg leading-8 text-gray-600">
+        <p class="mb-4 mt-6 md:!text-lg leading-relaxed text-gray-600 max-w-xl mx-auto">
           We take pride in our work, and it shows. Here's what some of our happy customers have to say.
         </p>
       </div>
     </UContainer>
-    <div class="relative mt-16">
-      <UMarquee :gap="16" pause-on-hover duration="120s" direction="right">
-        <UCard v-for="(testimonial, index) in testimonials" :key="index" class="w-96" :ui="{ background: 'bg-white', ring: 'ring-1 ring-gray-200', shadow: 'shadow-none' }">
+    <div class="relative mt-16aligned left">
+      <UMarquee
+        :gap="16"
+        pause-on-hover
+        duration="120s"
+        direction="right"
+        class="py-10"
+      >
+        <UCard
+          v-for="(testimonial, index) in testimonials"
+          :key="index"
+          class="w-96"
+          :ui="{ background: 'bg-white', ring: 'ring-1 ring-gray-200', shadow: 'shadow-none' }"
+        >
           <template #header>
             <div class="flex items-center gap-x-4">
-              <UAvatar :alt="testimonial.author.name" size="md" />
+              <UAvatar
+                :alt="testimonial.author.name"
+                size="md"
+              />
               <div>
                 <p class="font-semibold text-gray-900">{{ testimonial.author.name }}</p>
                 <p class="text-gray-600">{{ testimonial.author.handle }}</p>
               </div>
             </div>
           </template>
-          <p class="text-base leading-7 text-gray-700">"{{ testimonial.body }}"</p>
+          <p class="text-base leading-relaxed text-gray-700">"{{ testimonial.body }}"</p>
         </UCard>
       </UMarquee>
-      <div class="pointer-events-none absolute inset-y-0 left-0 w-32" style="background-image: linear-gradient(to right, white, transparent);" />
-      <div class="pointer-events-none absolute inset-y-0 right-0 w-32" style="background-image: linear-gradient(to left, white, transparent);" />
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 w-32"
+        style="background-image: linear-gradient(to right, white, transparent);"
+      />
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 w-32"
+        style="background-image: linear-gradient(to left, white, transparent);"
+      />
     </div>
   </div>
 </template>

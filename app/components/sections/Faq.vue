@@ -1,21 +1,30 @@
 <template>
   <div
     id="faq"
-    class="bg-white py-24 sm:py-32"
+    class="relative bg-blue-50 py-24 sm:py-32 border-t border-gray-300 overflow-hidden"
   >
-    <UContainer>
-      <div class="mx-auto max-w-4xl">
+    <!-- 45-degree gradient overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-primary-500/20 pointer-events-none"
+    ></div>
+
+    <UContainer class="relative z-10">
+      <div class="mx-auto max-w-4xl ">
         <div class="text-center mb-16">
           <h2 class="text-base font-semibold leading-7 text-primary-600">FAQ</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Have questions? We've got answers. Find the most common questions our customers ask.
+          <p class="mt-6 md:!text-lg text-gray-600 max-w-xl leading-relaxed mx-auto">
+            Have questions about our plumbing services? We've got answers. Find the most common questions our customers
+            ask.
           </p>
         </div>
 
         <UAccordion
+          class="max-w-2xl mx-auto"
           type="multiple"
           :items="faqItems"
+          :ui="{
+            item: 'border-b border-default last:border-b-0 first:rounded-t-md last:rounded-b-md overflow-hidden'
+          }"
         />
       </div>
     </UContainer>
@@ -49,7 +58,7 @@ const faqItems = [
   },
   {
     label: 'What payment methods do you accept?',
-    content: 'We accept cash, all major credit cards (Visa, Mastercard, American Express, Discover), checks, and digital payment methods. We also offer financing options for larger projects. Payment is due upon completion of work.',
+    content: 'We accept cash, all major credit cards (Visa, Mastercard, American Express, Discover), checks, and digital payment methods. Payment is due upon completion of work.',
   },
   {
     label: 'Do you offer warranties on your work?',

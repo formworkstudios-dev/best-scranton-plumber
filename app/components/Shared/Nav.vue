@@ -13,11 +13,11 @@
         class="flex items-center gap-2"
       >
         <UIcon
-          name="i-mdi-pipe-wrench"
+          name="i-fa6-solid-faucet"
           class="h-6 w-6 text-primary"
         />
         <span
-          class="font-bold text-xl transition-colors duration-300"
+          class="font-bold !text-base sm:!text-lg md:!text-xl transition-colors duration-300"
           :class="scrolled ? 'text-gray-900' : 'text-white'"
         >
           Best Scranton Plumber
@@ -31,13 +31,21 @@
         :class="scrolled ? 'text-gray-900' : 'text-white'"
       />
 
-      <!-- Call Now Button -->
+      <!-- Call Now Button - Desktop -->
       <UButton
-        to="tel:570-555-0101"
+        to="tel:570-905-8441"
         icon="i-heroicons-phone-20-solid"
         class="hidden lg:flex"
       >
         Call Now
+      </UButton>
+
+      <!-- Call Now Button - Mobile -->
+      <UButton
+        to="tel:570-905-8441"
+        class="lg:hidden"
+      >
+        Call Us
       </UButton>
 
       <!-- Mobile Menu Button will go here -->

@@ -88,6 +88,20 @@ export default defineAppConfig({
     selectMenu: {
       slots: {
         placeholder: "text-white",
+        trailingIcon: "text-white",
+      },
+    },
+    accordion: {
+      slots: {
+        root: "rounded-lg shadow-sm",
+        trigger: "cursor-pointer py-3 px-4",
+        item: "bg-white/60",
+        content: "bg-white/80 px-4 py-4",
+      },
+    },
+    card: {
+      slots: {
+        root: "bg-blue-100/80",
       },
     },
   },
