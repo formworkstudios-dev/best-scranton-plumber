@@ -29,9 +29,9 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
 
-  seo: {
-    redirectToCanonicalSiteUrl: true,
-  },
+  // seo: {
+  //   redirectToCanonicalSiteUrl: true,
+  // },
 
   schemaOrg: {
     identity: {
